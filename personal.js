@@ -28,21 +28,34 @@ overlay.addEventListener('click', closemenu);
 
 
 const contactForm = document.getElementById('applicationForm'),
-    contactMessage = document.getElementById('contact-message')
+      contactMessage = document.getElementById('contact-message'),
+      application = document.getElementById('form_container');
 
 const sendEmail = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    emailjs.sendForm('service_km7balj','template_uz9rorp','#applicationForm','Cshuz3q2Ul1WqyboJ')
+    emailjs.sendForm('service_km7balj', 'template_uz9rorp', '#applicationForm', 'Cshuz3q2Ul1WqyboJ')
     .then(() => {
-        contactMessage.textContent = 'Application Successfully Sent'
+        application.style.display = 'none';  // Hide the form
+        contactMessage.style.display = 'block'; // Show the message
+        contactMessage.textContent = 'Application Successfully Sent';
 
         setTimeout(() => {
-            contactMessage.textContent = ''
-        }, 5000)
+            contactMessage.style.display = 'none';
+            contactMessage.textContent = '';
+        }, 5000);
 
-        contactForm.reset()
+        contactForm.reset();
     })
-}
+    .catch((error) => {
+        contactMessage.style.display = 'block'; // Show the message
+        contactMessage.textContent = 'Failed to send application. Please try again later.';
 
-contactForm.addEventListener('submit', sendEmail)
+        setTimeout(() => {
+            contactMessage.style.display = 'none';
+            contactMessage.textContent = '';
+        }, 5000);
+    });
+};
+
+contactForm.addEventListener('submit', sendEmail);
