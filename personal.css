@@ -520,10 +520,16 @@ input {
     transition: 0.5s;
     border-radius: 5px;
     max-width: 400px;
-    height: 100px;
+    height: 200px;
     text-align: center;
     margin: 20px auto;
     display: none;
+}
+
+.contact_message img {
+    width: 100px;
+    display: block; /* To make sure the image is block-level and centered */
+    margin: 0 auto;
 }
 
 

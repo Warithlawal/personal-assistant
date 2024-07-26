@@ -38,22 +38,21 @@ const sendEmail = (e) => {
     .then(() => {
         application.style.display = 'none';  // Hide the form
         contactMessage.style.display = 'block'; // Show the message
-        contactMessage.textContent = 'Application Successfully Sent';
 
         setTimeout(() => {
             contactMessage.style.display = 'none';
-            contactMessage.textContent = '';
+            contactMessage.textContent = ''; // Clear the message text
         }, 5000);
 
         contactForm.reset();
     })
     .catch((error) => {
         contactMessage.style.display = 'block'; // Show the message
-        contactMessage.textContent = 'Failed to send application. Please try again later.';
+        contactMessage.innerHTML = '<img src="images/error.png" alt="Error"><span>Failed to send application. Please try again later.</span>';
 
         setTimeout(() => {
             contactMessage.style.display = 'none';
-            contactMessage.textContent = '';
+            contactMessage.innerHTML = ''; // Clear the message text
         }, 5000);
     });
 };
