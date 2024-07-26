@@ -16,7 +16,6 @@
     z-index: 1;
 }
 
-
 body.no-scroll {
     overflow: hidden;
 }
@@ -128,15 +127,14 @@ main {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    border: 1px solid #172E57;
+    border: none;
     font-weight: bold;
     transition: 0.5s;
     border-radius: 5px;
 }
 
 .apply-now:hover {
-    background-color: transparent;
-    color: #172E57;
+    background-color: #0056b3;
 }
 
 .pa-content {
@@ -415,6 +413,10 @@ footer {
     align-items: center;
 }
 
+.para p {
+    margin: 0;
+}
+
 .form {
     background-image: url("images/apply.png");
     width: 100%;
@@ -505,6 +507,18 @@ input {
 
 .form-container button:hover {
     background-color: #0056b3;
+}
+
+#contact_message {
+    background-color: #172E57;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 5px;
 }
 
 

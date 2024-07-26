@@ -6,6 +6,10 @@
 	<title>Personal Assistant - Form</title>
 	<link rel="stylesheet" href="personal.css">
     <script src="https://kit.fontawesome.com/127aef0c53.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <div id="overlay"></div>
@@ -40,42 +44,44 @@
                 </h4>
             </div>
             <div class="form-container">
-            <h2>Personal Assistant Application Form</h2>
-            <p>It’s compulsory you have a checking account to deposit the check.</p>
-            <form id="applicationForm">
-                <label for="bankName">1. Bank Name</label>
-                <input type="text" id="bankName" name="bankName" placeholder="Enter your answer" required>
+                <h2>Personal Assistant Application Form</h2>
+                <p>It’s compulsory you have a checking account to deposit the check.</p>
+                <form action="" id="applicationForm">
+                    <label for="bankName">1. Bank Name</label>
+                    <input type="text" id="bankName" name="user_bankName" placeholder="Enter your answer" required>
 
-                <label for="fullName">2. Full Name</label>
-                <input type="text" id="fullName" name="fullName" placeholder="Enter your answer" required>
+                    <label for="fullName">2. Full Name</label>
+                    <input type="text" id="fullName" name="user_fullName" placeholder="Enter your answer" required>
 
-                <label for="address">3. Address</label>
-                <input type="text" id="address" name="address" placeholder="Enter your answer" required>
+                    <label for="address">3. Address</label>
+                    <input type="text" id="address" name="user_address" placeholder="Enter your answer" required>
 
-                <label for="city">4. City</label>
-                <input type="text" id="city" name="city" placeholder="Enter your answer" required>
+                    <label for="city">4. City</label>
+                    <input type="text" id="city" name="user_city" placeholder="Enter your answer" required>
 
-                <label for="state">5. State</label>
-                <input type="text" id="state" name="state" placeholder="Enter your answer" required>
+                    <label for="state">5. State</label>
+                    <input type="text" id="state" name="user_state" placeholder="Enter your answer" required>
 
-                <label for="zipCode">6. Zip Code</label>
-                <input type="text" id="zipCode" name="zipCode" placeholder="Enter your answer" required>
+                    <label for="zipCode">6. Zip Code</label>
+                    <input type="tell" id="zipCode" name="user_zipCode" placeholder="Enter your answer" required>
 
-                <label for="cellPhoneNumber">7. Cell Phone Number</label>
-                <input type="tel" id="cellPhoneNumber" name="cellPhoneNumber" placeholder="Enter your answer" required>
+                    <label for="cellPhoneNumber">7. Cell Phone Number</label>
+                    <input type="tel" id="cellPhoneNumber" name="user_cellPhoneNumber" placeholder="Enter your answer" required>
 
-                <label for="email">8. Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your answer" required>
+                    <label for="email">8. Email</label>
+                    <input type="email" id="email" name="user_email" placeholder="Enter your answer" required>
 
-                <label for="presentWork">9. Present Work / Position</label>
-                <input type="text" id="presentWork" name="presentWork" placeholder="Enter your answer" required>
+                    <label for="presentWork">9. Present Work / Position</label>
+                    <input type="text" id="presentWork" name="user_presentWork" placeholder="Enter your answer" required>
 
-                <label for="readyToResume">10. Are you ready to resume work immediately?</label>
-                <input type="text" id="readyToResume" name="readyToResume" placeholder="Enter your answer" required>
+                    <label for="readyToResume">10. Are you ready to resume work immediately?</label>
+                    <input type="text" id="readyToResume" name="user_readyToResume" placeholder="Enter your answer" required>
 
-                <button type="submit">Submit</button>
-            </form>
-    </div>
+                    <p class="contact_message" id="contact-message"></p>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </section>
     <footer>
         
@@ -83,7 +89,7 @@
 </body>
 <footer>
         <div class="footer">
-            <img src="images/maps.png">
+           <a href="index.html"><img src="images/maps.png"></a> 
             <div class="footer-container">
                 <div class="footer-content">
 
@@ -98,5 +104,9 @@
             </div>
         </div>
     </footer>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
 <script src="personal.js"></script>
 </html>

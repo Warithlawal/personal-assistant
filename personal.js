@@ -25,3 +25,24 @@ function closemenu() {
 }
 
 overlay.addEventListener('click', closemenu);
+
+
+const contactForm = document.getElementById('applicationForm'),
+    contactMessage = document.getElementById('contact-message')
+
+const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs.sendForm('service_km7balj','template_uz9rorp','#applicationForm','Cshuz3q2Ul1WqyboJ')
+    .then(() => {
+        contactMessage.textContent = 'Application Successfully Sent'
+
+        setTimeout(() => {
+            contactMessage.textContent = ''
+        }, 5000)
+
+        contactForm.reset()
+    })
+}
+
+contactForm.addEventListener('submit', sendEmail)
