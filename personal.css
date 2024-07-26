@@ -1,0 +1,528 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    padding: 20px 5%;
+    z-index: 2;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+nav img {
+    width: 170px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+nav ul li a{
+    color: #172E57;
+    text-decoration: none;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #172E57;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+nav ul li a.active::after{
+    width: 10%;
+}
+
+nav ul li a.active {
+    font-weight: bold; 
+    color: #172E57;
+}
+
+nav .fas {
+    display: none;
+}
+
+.ul-space {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+main {
+    margin: 110px 0 0 0;
+}
+
+.header {
+    background-image: url("images/hero.jpeg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-content {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header-content h1{
+    color: white;
+    font-size: 50px;
+    max-width: 800px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.apply-now {
+    background-color: #172E57;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #172E57;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.apply-now:hover {
+    background-color: transparent;
+    color: #172E57;
+}
+
+.pa-content {
+    display: flex;
+    margin: 100px 10% 80px;
+    align-items: top;
+    justify-content: center;
+    gap: 80px;
+}
+
+.pa-header {
+    max-width: 500px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.pa-header h1 {
+    font-size: 40px;
+    color: #172E57;
+}
+
+.pa-header p {
+    font-size: 17px;
+    line-height: 27px;
+    color: #172E57;
+}
+
+.pa-header ul li {
+    font-size: 17px;
+    line-height: 27px;
+    color: #172E57;
+}
+
+
+.lottie img{
+    max-width: 390px;   
+}
+
+
+.maps-container {
+    width: 100%;
+    background-color: #172E57;
+    text-align: center;
+}
+
+.maps-content {
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.maps-content h1 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+.maps img {
+    width: 100px;
+}
+
+.maps {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin: 50px 100px;
+    gap: 50px;
+}
+
+.maps-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    align-items: center;
+}
+
+.maps-body h3 {
+    font-size: 25px;
+}
+
+.founded {
+    color: #172E57;
+    text-align: center;
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.founded p {
+    font-size: 22px;
+    max-width: 900px;
+    font-weight: 300;
+}
+
+.cta {
+    text-align: center;
+    max-width: 700px;
+    margin: 50px auto;
+    display: block;
+}
+
+.cta h2 {
+    color: 7ED3F1;
+    padding-bottom: 25px;
+}
+
+.global-container {
+    width: 100%;
+    background-color: #172E57;
+    text-align: center;
+}
+
+.global-content {
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.global-content span {
+    color: #7ED3F1;
+}
+
+.global-content h1 {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    font-weight: 300;
+}
+
+.global i {
+    font-size: 100px;
+}
+
+.global {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin: 50px 100px;
+    gap: 40px;
+}
+
+.global-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #172E57;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.maps-body h3 {
+    font-size: 25px;
+}
+
+footer {
+    background-color:  #172E57;
+    padding: 10px 10%;
+}
+
+.footer img {
+    width: 200px;
+    margin: 50px 10%;
+}
+
+.footer-container {
+    display: flex;
+    color: white;
+    justify-content: space-around;
+}
+
+.footer-container p {
+    max-width: 425px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+.footer-container i {
+    font-size: 20px;
+    padding: 0 0 20px 0;
+}
+
+
+.footer-links {
+   display: flex;
+   justify-content: space-between;
+   gap: 30px;
+   max-width: 500px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.about {
+    background-image: url("images/building.png");
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-content {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-content h1{
+    color: white;
+    font-size: 70px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #450065;
+}
+
+.about-content {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.about-content p {
+    max-width: 1030px;
+    color: white;
+    line-height: 24px;
+    color: #172E57;
+}
+
+.about-us {
+    margin: 60px 10%;
+}
+
+.about-us h3 {
+    font-size: 30px;
+    margin-bottom: 9px;
+    color: #172E57;
+}
+
+.about-us p {
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.para {
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+@media only screen and (max-width: 937px){
+    nav .fas {
+        display: block;
+        font-size: 25px;
+        color: #172E57;
+    }
+
+    nav ul {
+        background-color: #ffffff;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: ease 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .button-fas {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .benefits {
+        max-width: 630px;
+    }
+
+    .values {
+        max-width: 630px;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .pa-content  {
+        flex-direction: column;
+    }
+
+    .left {
+        order: 1;
+    }
+
+    .right {
+        order: 2;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+
+    .header-content h1{
+        font-size: 30px;
+    }
+
+    .maps {
+        gap: 40px;
+    }
+
+    .maps-content h1 {
+        font-size: 30px;
+    }
+
+    .cta {
+        padding: 0 20px;
+    }
+
+    .global-content h1 {
+        font-size: 30px;
+    }
+
+    .founded {
+        margin: 50px;
+    }
+
+    .founded p {
+        font-size: 18px;
+    }
+
+
+    .maps {
+        margin: 0 0 100px 0;
+    }
+
+    .lottie img{
+        max-width: 300px;   
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        align-items: start;
+    }
+
+    .footer-container h3 {
+        margin-bottom: 10px;
+    }
+
+}
